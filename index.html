@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Weather App</h1>
+      <form id="search-city">
+      <div class="input-group mb-3 w-25" >
+        
+                  <input
+          type="text"
+          class="form-control"
+          placeholder="City"
+          aria-label="City"
+          aria-describedby="button-addon2"
+        id="input-city"
+          />
+        <button
+          class="btn btn-outline-secondary"
+          type="submit"
+          id="button-addon2"
+        >
+          Go
+        </button>
+     
+
+      </div>
+    </form>
+      <p>5-Day Weather Forecast for <em id="cur-city">Kyiv, Ukraine</em></p>
+<p id="day">Day, Time</p>
+      <div class="text-center">
+        <div class="card-group">
+          <div class="card" style="width: 18rem">
+            <h3 class="card-title" id="">TODAY</h3>
+            <h4 class="card-title" id="first-day">MAY 17</h4>
+            <img src="img/cloud.png" class="card-img-top" alt="Weather" />
+            <div class="card-body">
+              <p class="card-text">It rains</p>
+              <!-- <h4><span class="temp night" id="today-temp-day">17</span>°<span class="degree">C</span> / <span class="temp day">25</span>°<span class="degree">C</span></h4> -->
+              <h4> <span id="now-temp">25</span>°<span class="degree">C</span></h4>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem">
+            <h3 class="card-title" id="week-day">TUE</h3>
+            <h4 class="card-title" id="days">MAY 18</h4>
+            <img src="img/rainy-day.png" class="card-img-top" alt="wheather" />
+            <div class="card-body">
+              <p class="card-text">Sunny with rains</p>
+              <h4> <span class="temp night">20</span>°<span class="degree">C</span> / <span class="temp day">28</span>°<span class="degree">C</span></h4>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <h3 class="card-title" id="week-day">WED</h3>
+            <h4 class="card-title" id="days">MAY 19</h4>
+            <img src="img/thunder.png" class="card-img-top" alt="wheather" />
+            <div class="card-body">
+              <p class="card-text">Thunderstorm</p>
+              <h4><span class="temp night">15</span>°<span class="degree">C</span> / <span class="temp day">23</span>°<span class="degree">C</span></h4>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <h3 class="card-title" id="week-day">THU</h3>
+            <h4 class="card-title" id="days">MAY 20</h4>
+            <img src="img/sun.png" class="card-img-top w-img" alt="wheather" />
+            <div class="card-body">
+              <p class="card-text">Sunny</p>
+              <h4><span class="temp night">19</span>°<span class="degree">C</span> / <span class="temp day">27</span>°<span class="degree">C</span></h4>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <h3 class="card-title" id="week-day">FRI</h3>
+            <h4 class="card-title" id="days">MAY 21</h4>
+            <img src="img/sun (2).png" class="card-img-top" alt="wheather" />
+            <div class="card-body">
+              <p class="card-text">Sunny</p>
+              <h4><span class="temp night">21</span>°<span class="degree">C</span> / <span class="temp day">30</span>°<span class="degree">C</span></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary btn-lg mt-3 mb-3" id="button-current">Current</button>
+
+      <p>Convert temp to <a href="#" id="to-faren"> Fahrenheit</a> / <a href="#" id="to-celcius">Celsius</a></p>
+    </div>
+    <script src="src/index.js">
+    </script>
+  </body>
+</html>
